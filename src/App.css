@@ -156,6 +156,7 @@ span.navbar-text {
   filter: brightness(0) saturate(100%) invert(0%) sepia(7%) saturate(98%) hue-rotate(346deg) brightness(95%) contrast(86%);
 }
 .navbar-text button {
+  border-radius: 20px;
   font-weight: 700;
   color: #fff;
   border: 1px solid #fff;
@@ -170,6 +171,7 @@ span.navbar-text {
   z-index: 1;
 }
 .navbar-text button::before {
+  border-radius: 20px;
   content: "";
   width: 0%;
   height: 100%;
@@ -620,5 +622,11 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   color: #B8B8B8;
   letter-spacing: 0.5px;
   margin-top: 20px;
+}
+
+.black-container {
+  background-color: black;
+  padding: 20px;
+  border-radius: 20px;
 }
 

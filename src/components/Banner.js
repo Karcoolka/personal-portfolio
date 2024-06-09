@@ -51,10 +51,12 @@ return (
             <Row className="align-items-center">
                 <Col xs={12} md={6} xl={7}>
                     <span className="sub-title">Welcome to my Portfolio</span>
-                    <h1>{`Hi I'm Adela`}<br /><span className="wrap">{text || '\u00A0'}</span></h1>
+                    <h1>{`Hi I'm Adela,`}<br /><span className="wrap">{text || '\u00A0'}</span></h1>
+                    <div className="black-container">
                     <p>I specialize in creating reliable and efficient applications,
                         building attractive and responsive websites, integrating front-end and back-end technologies and continuously enhancing my skills and knowledge.
                         Check out my work, and let's collaborate on your next project!</p>
+                    </div>
                     <button onClick={() => console.log('connect')}>Let's connect <ArrowRightCircle size={25}></ArrowRightCircle></button>
                 </Col>
                 <Col xs={12} md={6} xl={5}>

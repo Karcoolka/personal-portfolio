@@ -44,7 +44,7 @@ export const NavBar = () => {
                         <a href="https://www.linkedin.com/in/adela-simkova"><img src={navIcon1} alt="" /></a>
                         <a href="https://www.facebook.com/cervena.karkulka.5"><img src={navIcon2} alt="" /></a>
                     </div>
-                    <button className="" onClick={() => console.log('connect')}>
+                    <button onClick={() => console.log('connect')}>
                         <span>Let's connect</span>
                     </button>
                 </span>
