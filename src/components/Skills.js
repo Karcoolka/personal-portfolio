@@ -54,14 +54,16 @@ export const Skills = () => {
                                     <img src={meter1} alt="Image" />
                                     <h5>Mobile App Development</h5>
                                 </div>
+                                <div className="item">
+                                    <img src={meter1} alt="Image" />
+                                    <h5>Agile Project Management</h5>
+                                </div>
                             </Carousel>
                             <img src={colorSharp} alt="Image" className="background-image-left" />
                         </div>
-
                     </Col>
                 </Row>
             </Container>
         </selection>
-
     )
 }

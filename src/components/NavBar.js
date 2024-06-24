@@ -3,6 +3,7 @@ import {useEffect, useState} from "react";
 import logo from '../assets/img/logo.png';
 import navIcon1 from '../assets/img/nav-icon1.svg';
 import navIcon2 from '../assets/img/nav-icon2.svg';
+import navIcon3 from '../assets/img/nav-icon3.svg';
 export const NavBar = () => {
     const [activeLink, setActiveLink] = useState('home');
     const [scrolled, setScrolled] = useState(false);
@@ -43,6 +44,7 @@ export const NavBar = () => {
                     <div className="social-icon">
                         <a href="https://www.linkedin.com/in/adela-simkova"><img src={navIcon1} alt="" /></a>
                         <a href="https://www.facebook.com/cervena.karkulka.5"><img src={navIcon2} alt="" /></a>
+                        <a href="https://github.com/Karcoolka"><img src={navIcon3} alt="" /></a>
                     </div>
                     <button onClick={() => console.log('connect')}>
                         <span>Let's connect</span>

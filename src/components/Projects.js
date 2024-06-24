@@ -4,9 +4,10 @@ import colorSharp2 from "../assets/img/color-sharp2.png";
 import projImg1 from "../assets/img/project-img1.png";
 import projImg2 from "../assets/img/project-img2.png";
 import projImg3 from "../assets/img/project-img3.png";
+import projFirm360 from "../assets/img/project-firm360.png";
 export const Projects = () => {
 
-    const projects = [
+    const projects_full_stack = [
         {
             title: "eRaZ",
             description: "Full-Stack Development",
@@ -14,28 +15,23 @@ export const Projects = () => {
         },
         {
             title: "Firm360",
-            description: "Full-Stack Development",
-            imgUrl: projImg2,
+            description: "Angular 17, RxJs, Type Script, Java Spring, AWS, SCRUM",
+            imgUrl: projFirm360,
+            demoUrl: "https://www.google.com",
+            sourceCodeUrl: "https://www.google.com"
         },
         {
             title: "MEAN app Maxmillian",
             description: "Full-Stack Development",
             imgUrl: projImg2,
         },
+    ];
+
+    const projects_front_end = [
         {
             title: "Recipes Roulette",
             description: "Front-End Development",
             imgUrl: projImg3,
-        },
-        {
-            title: "Shopify",
-            description: "Backend Development",
-            imgUrl: projImg1,
-        },
-        {
-            title: "Attendance-Tracker",
-            description: "Backend Development",
-            imgUrl: projImg2,
         },
         {
             title: "Audio Plugin",
@@ -43,11 +39,19 @@ export const Projects = () => {
             imgUrl: projImg3,
         },
         {
-            title: "Angular Mobile App MAxmillian",
+            title: "Attendance-Tracker",
+            description: "Backend Development",
+            imgUrl: projImg2,
+        },
+    ];
+
+    const projects_mobile_apps = [
+        {
+            title: "Angular Mobile App Maxmillian",
             description: "Mobile App Development",
             imgUrl: projImg3,
         },
-    ]
+    ];
 
     return (
         <section className="project" id="projects">
@@ -59,35 +63,36 @@ export const Projects = () => {
                                     <Tab.Container id="projects-tabs" defaultActiveKey="first">
                                         <Nav variant="pills" className="nav-pills mb-5 justify-content-center align-items-center" id="pills-tab">
                                             <Nav.Item>
-                                                <Nav.Link eventKey="first">Tab 1</Nav.Link>
+                                                <Nav.Link eventKey="first">Full-Stack</Nav.Link>
                                             </Nav.Item>
                                             <Nav.Item>
-                                                <Nav.Link eventKey="second">Tab 2</Nav.Link>
+                                                <Nav.Link eventKey="second">Front-End/Back-End</Nav.Link>
                                             </Nav.Item>
                                             <Nav.Item>
-                                                <Nav.Link eventKey="third">Tab 3</Nav.Link>
+                                                <Nav.Link eventKey="third">Mobile Apps</Nav.Link>
                                             </Nav.Item>
                                         </Nav>
-                                        <Tab.Content id="slideInUp">
+                                        <Tab.Content>
                                             <Tab.Pane eventKey="first">
                                                 <Row>
-                                                    {
-                                                        projects.map((project, index) => {
-                                                            return (
-                                                                <ProjectCard
-                                                                    key={index}
-                                                                    {...project}
-                                                                />
-                                                            )
-                                                        })
-                                                    }
+                                                    {projects_full_stack.map((project, index) => (
+                                                        <ProjectCard key={index} {...project} />
+                                                    ))}
                                                 </Row>
                                             </Tab.Pane>
                                             <Tab.Pane eventKey="second">
-                                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque quam, quod neque provident velit, rem explicabo excepturi id illo molestiae blanditiis, eligendi dicta officiis asperiores delectus quasi inventore debitis quo.</p>
+                                                <Row>
+                                                    {projects_front_end.map((project, index) => (
+                                                        <ProjectCard key={index} {...project} />
+                                                    ))}
+                                                </Row>
                                             </Tab.Pane>
                                             <Tab.Pane eventKey="third">
-                                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque quam, quod neque provident velit, rem explicabo excepturi id illo molestiae blanditiis, eligendi dicta officiis asperiores delectus quasi inventore debitis quo.</p>
+                                                <Row>
+                                                    {projects_mobile_apps.map((project, index) => (
+                                                        <ProjectCard key={index} {...project} />
+                                                    ))}
+                                                </Row>
                                             </Tab.Pane>
                                         </Tab.Content>
                                     </Tab.Container>
