@@ -4,6 +4,8 @@ import {Col, Container, Row} from "react-bootstrap";
 import meter1 from '../assets/img/meter1.svg';
 import meter2 from '../assets/img/meter2.svg';
 import meter3 from '../assets/img/meter3.svg';
+import meter4 from '../assets/img/meter4.svg';
+import meter5 from '../assets/img/meter5.svg';
 import colorSharp from '../assets/img/color-sharp.png';
 export const Skills = () => {
     const responsive = {
@@ -39,8 +41,16 @@ export const Skills = () => {
                             </p>
                             <Carousel responsive={responsive} infinite={true} className="skill-slider">
                                 <div className="item">
-                                    <img src={meter1} alt="Image" />
+                                    <img src={meter4} alt="Image" />
                                     <h5>Full-Stack Development</h5>
+                                </div>
+                                <div className="item">
+                                    <img src={meter1} alt="Image" />
+                                    <h5>Mobile App Development</h5>
+                                </div>
+                                <div className="item">
+                                    <img src={meter5} alt="Image" />
+                                    <h5>Agile Project Management</h5>
                                 </div>
                                 <div className="item">
                                     <img src={meter2} alt="Image" />
@@ -49,14 +59,6 @@ export const Skills = () => {
                                 <div className="item">
                                     <img src={meter3} alt="Image" />
                                     <h5>Back-End Development</h5>
-                                </div>
-                                <div className="item">
-                                    <img src={meter1} alt="Image" />
-                                    <h5>Mobile App Development</h5>
-                                </div>
-                                <div className="item">
-                                    <img src={meter1} alt="Image" />
-                                    <h5>Agile Project Management</h5>
                                 </div>
                             </Carousel>
                             <img src={colorSharp} alt="Image" className="background-image-left" />
