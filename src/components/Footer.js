@@ -19,7 +19,7 @@ export const Footer = () => {
                             <a href="https://www.facebook.com/cervena.karkulka.5"><img src={navIcon2} alt="Facebook" /></a>
                             <a href="https://github.com/Karcoolka"><img src={navIcon3} alt="Git Hub" /></a>
                         </div>
-                        <p>Copyright 2022. All Rights Reserved</p>
+                        <p>Copyright 2024. All Rights Reserved</p>
                     </Col>
                 </Row>
             </Container>

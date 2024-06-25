@@ -1,5 +1,5 @@
 import { Navbar, Container, Nav} from 'react-bootstrap';
-import {useEffect, useState} from "react";
+import {useEffect, useRef, useState} from "react";
 import logo from '../assets/img/logo.png';
 import navIcon1 from '../assets/img/nav-icon1.svg';
 import navIcon2 from '../assets/img/nav-icon2.svg';
@@ -7,6 +7,7 @@ import navIcon3 from '../assets/img/nav-icon3.svg';
 export const NavBar = () => {
     const [activeLink, setActiveLink] = useState('home');
     const [scrolled, setScrolled] = useState(false);
+    const bottomRef = useRef(null);
 
     useEffect(() => {
         const onScroll = () => {
@@ -24,6 +25,13 @@ export const NavBar = () => {
     const onUpdateActiveLink = (value) => {
         setActiveLink(value);
     }
+
+    const scrollToContact = () => {
+        const contactSection = document.getElementById('contact');
+        if (contactSection) {
+            contactSection.scrollIntoView({ behavior: 'smooth' });
+        }
+    };
 
     return (
     <Navbar expand="lg" className={scrolled ? "scrolled" : ""}>
@@ -46,7 +54,7 @@ export const NavBar = () => {
                         <a href="https://www.facebook.com/cervena.karkulka.5"><img src={navIcon2} alt="" /></a>
                         <a href="https://github.com/Karcoolka"><img src={navIcon3} alt="" /></a>
                     </div>
-                    <button onClick={() => console.log('connect')}>
+                    <button onClick={scrollToContact}>
                         <span>Let's connect</span>
                     </button>
                 </span>

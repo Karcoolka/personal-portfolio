@@ -464,6 +464,29 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   font-size: 15px;
   letter-spacing: 0.8px;
 }
+.proj-btn {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+}
+.proj-btn div {
+  width: 45%;
+  text-align: center;
+}
+.view-btn {
+  color: #1f1c1d;
+    padding: 5px 10px;
+    background: #fff;
+    font-weight: 700;
+    letter-spacing: 0.8px;
+    border-radius: 15px;
+    position: relative;
+    transition: 0.3s ease-in-out;
+    }
+.view-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
 .background-image-right {
   top: 20%;
   position: absolute;

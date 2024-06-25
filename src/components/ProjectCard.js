@@ -1,23 +1,32 @@
 import Col from "react-bootstrap/Col";
 export const ProjectCard= ({title, description, imgUrl, demoUrl, sourceCodeUrl}) => {
+    const handleRedirection = (url) => {
+        window.open(url, '_blank', 'noopener,noreferrer');
+    };
+
     return (
         <Col size={12} sm={6} md={4}>
             <div className="proj-imgbx">
                 <img src={imgUrl} />
                 <div className="proj-txtx">
                     <h4>{title}</h4>
+                    <h5>Tech Stack:</h5>
                     <span>{description}</span>
                     <div className="proj-btn">
-                        {demoUrl ? (
-                            <a href={demoUrl} target="_blank" rel="noopener noreferrer">Demo</a>
-                        ) : (
-                            <small>Private Demo</small>
-                        )}
+                        <div>
+                            {demoUrl ? (
+                                <button className="view-btn" onClick={() => handleRedirection(demoUrl)}>Demo</button>
+                            ) : (
+                                <button disabled={!demoUrl} className="view-btn" onClick={() => handleRedirection(demoUrl)}>Private Demo</button>
+                            )}
+                        </div>
+                        <div>
                         {sourceCodeUrl ? (
-                            <a href={sourceCodeUrl} target="_blank" rel="noopener noreferrer">Source Code</a>
+                            <button className="view-btn" onClick={() => handleRedirection(sourceCodeUrl)}>Source Code</button>
                         ) : (
-                            <small>Not Open Source</small>
+                            <button disabled={!sourceCodeUrl} className="view-btn" onClick={() => handleRedirection(sourceCodeUrl)}>Not Open Source</button>
                         )}
+                        </div>
                     </div>
                 </div>
             </div>

@@ -1,24 +1,26 @@
 import {Container, Row, Col, Nav, Tab} from "react-bootstrap";
 import {ProjectCard} from "./ProjectCard";
 import colorSharp2 from "../assets/img/color-sharp2.png";
-import projImg1 from "../assets/img/project-img1.png";
 import projImg2 from "../assets/img/project-img2.png";
 import projImg3 from "../assets/img/project-img3.png";
 import projFirm360 from "../assets/img/project-firm360.png";
+import projEraz from "../assets/img/project-eraz.jpg";
+import projPortfolio from "../assets/img/project-portfolio.png";
+import projAttendanceTracker from "../assets/img/project-attendance-tracker.png";
+import TrackVisibility from "react-on-screen";
+
 export const Projects = () => {
 
     const projects_full_stack = [
         {
             title: "eRaZ",
-            description: "Full-Stack Development",
-            imgUrl: projImg1,
+            description: "Vue.js, Azure, PHP 8.2, Nette, Docker, Node.js, Express.js, REST, SQL, Microsoft Teams",
+            imgUrl: projEraz,
         },
         {
             title: "Firm360",
-            description: "Angular 17, RxJs, Type Script, Java Spring, AWS, SCRUM",
+            description: "Angular 17, RxJs, Type Script, Java Spring, REST, Postman, SQL, JWT, Thymeleaf, AWS, SCRUM, GitLab",
             imgUrl: projFirm360,
-            demoUrl: "https://www.google.com",
-            sourceCodeUrl: "https://www.google.com"
         },
         {
             title: "MEAN app Maxmillian",
@@ -30,18 +32,28 @@ export const Projects = () => {
     const projects_front_end = [
         {
             title: "Recipes Roulette",
-            description: "Front-End Development",
-            imgUrl: projImg3,
+            description: "Angular 17, RxJs, Type Script, Bootstrap, Node.js, Firebase",
+            imgUrl: projPortfolio,
+            demoUrl: "https://euphonious-pegasus-ea7756.netlify.app/",
+            sourceCodeUrl: "https://github.com/Karcoolka/Recipe-Roulette"
+        },
+        {
+            title: "Personal Portfolio",
+            description: "React, React Bootstrap, RxJs, Type Script, Express.js, Node.js",
+            imgUrl: projPortfolio,
+            demoUrl: "https://euphonious-pegasus-ea7756.netlify.app/",
+            sourceCodeUrl: "https://github.com/Karcoolka/personal-portfolio"
+        },
+        {
+            title: "Attendance-Tracker",
+            description: "Java Spring, JPA, Hibernate, OAuth2, REST, Postman, JWT, Thymeleaf, MySQL, SCRUM, Jira",
+            imgUrl: projAttendanceTracker,
+            sourceCodeUrl: "https://github.com/Karcoolka/Attendance-Tracker"
         },
         {
             title: "Audio Plugin",
             description: "Front-End Development",
             imgUrl: projImg3,
-        },
-        {
-            title: "Attendance-Tracker",
-            description: "Backend Development",
-            imgUrl: projImg2,
         },
     ];
 
@@ -58,44 +70,49 @@ export const Projects = () => {
             <Container>
                 <Row>
                     <Col size={12}>
+                        <TrackVisibility>
+                            {({isVisible}) =>
+                                <div className={isVisible ? "animate__animated animate__slideInUp" : ""}>
                                     <h2>Projects</h2>
-                                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
-                                    <Tab.Container id="projects-tabs" defaultActiveKey="first">
-                                        <Nav variant="pills" className="nav-pills mb-5 justify-content-center align-items-center" id="pills-tab">
-                                            <Nav.Item>
-                                                <Nav.Link eventKey="first">Full-Stack</Nav.Link>
-                                            </Nav.Item>
-                                            <Nav.Item>
-                                                <Nav.Link eventKey="second">Front-End/Back-End</Nav.Link>
-                                            </Nav.Item>
-                                            <Nav.Item>
-                                                <Nav.Link eventKey="third">Mobile Apps</Nav.Link>
-                                            </Nav.Item>
-                                        </Nav>
-                                        <Tab.Content>
-                                            <Tab.Pane eventKey="first">
-                                                <Row>
-                                                    {projects_full_stack.map((project, index) => (
-                                                        <ProjectCard key={index} {...project} />
-                                                    ))}
-                                                </Row>
-                                            </Tab.Pane>
-                                            <Tab.Pane eventKey="second">
-                                                <Row>
-                                                    {projects_front_end.map((project, index) => (
-                                                        <ProjectCard key={index} {...project} />
-                                                    ))}
-                                                </Row>
-                                            </Tab.Pane>
-                                            <Tab.Pane eventKey="third">
-                                                <Row>
-                                                    {projects_mobile_apps.map((project, index) => (
-                                                        <ProjectCard key={index} {...project} />
-                                                    ))}
-                                                </Row>
-                                            </Tab.Pane>
-                                        </Tab.Content>
-                                    </Tab.Container>
+                                    <p>Let's check my projects with their tech stack that I am experienced in:</p>
+                                </div>}
+                        </TrackVisibility>
+                        <Tab.Container id="projects-tabs" defaultActiveKey="first">
+                            <Nav variant="pills" className="nav-pills mb-5 justify-content-center align-items-center" id="pills-tab">
+                                <Nav.Item>
+                                    <Nav.Link eventKey="first">Full-Stack</Nav.Link>
+                                </Nav.Item>
+                                <Nav.Item>
+                                    <Nav.Link eventKey="second">Front-End/Back-End</Nav.Link>
+                                </Nav.Item>
+                                <Nav.Item>
+                                    <Nav.Link eventKey="third">Mobile Apps</Nav.Link>
+                                </Nav.Item>
+                            </Nav>
+                            <Tab.Content>
+                                <Tab.Pane eventKey="first">
+                                    <Row>
+                                        {projects_full_stack.map((project, index) => (
+                                            <ProjectCard key={index} {...project} />
+                                        ))}
+                                    </Row>
+                                </Tab.Pane>
+                                <Tab.Pane eventKey="second">
+                                    <Row>
+                                        {projects_front_end.map((project, index) => (
+                                            <ProjectCard key={index} {...project} />
+                                        ))}
+                                    </Row>
+                                </Tab.Pane>
+                                <Tab.Pane eventKey="third">
+                                    <Row>
+                                        {projects_mobile_apps.map((project, index) => (
+                                            <ProjectCard key={index} {...project} />
+                                        ))}
+                                    </Row>
+                                </Tab.Pane>
+                            </Tab.Content>
+                        </Tab.Container>
                     </Col>
                 </Row>
             </Container>
