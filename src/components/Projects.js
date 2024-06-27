@@ -6,6 +6,7 @@ import projImg3 from "../assets/img/project-img3.png";
 import projFirm360 from "../assets/img/project-firm360.png";
 import projEraz from "../assets/img/project-eraz.jpg";
 import projPortfolio from "../assets/img/project-portfolio.png";
+import projRecipeRoulette from "../assets/img/project-recipe-roulette.png";
 import projAttendanceTracker from "../assets/img/project-attendance-tracker.png";
 import TrackVisibility from "react-on-screen";
 
@@ -33,7 +34,7 @@ export const Projects = () => {
         {
             title: "Recipes Roulette",
             description: "Angular 17, RxJs, Type Script, Bootstrap, Node.js, Firebase",
-            imgUrl: projPortfolio,
+            imgUrl: projRecipeRoulette,
             demoUrl: "https://euphonious-pegasus-ea7756.netlify.app/",
             sourceCodeUrl: "https://github.com/Karcoolka/Recipe-Roulette"
         },
