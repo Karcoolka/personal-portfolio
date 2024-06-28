@@ -14,16 +14,19 @@ export const Projects = () => {
 
     const projects_full_stack = [
         {
+            id: 1,
             title: "eRaZ",
             description: "Vue.js, Azure, PHP 8.2, Nette, Docker, Node.js, Express.js, REST, SQL, Microsoft Teams",
             imgUrl: projEraz,
         },
         {
+            id: 2,
             title: "Firm360",
             description: "Angular 17, RxJs, Type Script, Java Spring, REST, Postman, SQL, JWT, Thymeleaf, AWS, SCRUM, GitLab",
             imgUrl: projFirm360,
         },
         {
+            id: 3,
             title: "MEAN app Maxmillian",
             description: "Full-Stack Development",
             imgUrl: projImg2,
@@ -32,6 +35,7 @@ export const Projects = () => {
 
     const projects_front_end = [
         {
+            id: 4,
             title: "Recipes Roulette",
             description: "Angular 17, RxJs, Type Script, Bootstrap, Node.js, Firebase",
             imgUrl: projRecipeRoulette,
@@ -39,6 +43,7 @@ export const Projects = () => {
             sourceCodeUrl: "https://github.com/Karcoolka/Recipe-Roulette"
         },
         {
+            id: 5,
             title: "Personal Portfolio",
             description: "React, React Bootstrap, RxJs, Type Script, Express.js, Node.js",
             imgUrl: projPortfolio,
@@ -46,12 +51,14 @@ export const Projects = () => {
             sourceCodeUrl: "https://github.com/Karcoolka/personal-portfolio"
         },
         {
+            id: 6,
             title: "Attendance-Tracker",
             description: "Java Spring, JPA, Hibernate, OAuth2, REST, Postman, JWT, Thymeleaf, MySQL, SCRUM, Jira",
             imgUrl: projAttendanceTracker,
             sourceCodeUrl: "https://github.com/Karcoolka/Attendance-Tracker"
         },
         {
+            id: 7,
             title: "Audio Plugin",
             description: "Front-End Development",
             imgUrl: projImg3,
@@ -60,6 +67,7 @@ export const Projects = () => {
 
     const projects_mobile_apps = [
         {
+            id: 8,
             title: "Angular Mobile App Maxmillian",
             description: "Mobile App Development",
             imgUrl: projImg3,
@@ -93,22 +101,22 @@ export const Projects = () => {
                             <Tab.Content>
                                 <Tab.Pane eventKey="first">
                                     <Row>
-                                        {projects_full_stack.map((project, index) => (
-                                            <ProjectCard key={index} {...project} />
+                                        {projects_full_stack.map((project) => (
+                                            <ProjectCard key={project.id} {...project} />
                                         ))}
                                     </Row>
                                 </Tab.Pane>
                                 <Tab.Pane eventKey="second">
                                     <Row>
-                                        {projects_front_end.map((project, index) => (
-                                            <ProjectCard key={index} {...project} />
+                                        {projects_front_end.map((project) => (
+                                            <ProjectCard key={project.id} {...project} />
                                         ))}
                                     </Row>
                                 </Tab.Pane>
                                 <Tab.Pane eventKey="third">
                                     <Row>
-                                        {projects_mobile_apps.map((project, index) => (
-                                            <ProjectCard key={index} {...project} />
+                                        {projects_mobile_apps.map((project) => (
+                                            <ProjectCard key={project.id} {...project} />
                                         ))}
                                     </Row>
                                 </Tab.Pane>
@@ -117,7 +125,7 @@ export const Projects = () => {
                     </Col>
                 </Row>
             </Container>
-            <img className="background-image-right" src={colorSharp2}></img>
+            <img className="background-image-right" src={colorSharp2} alt="Background"></img>
         </section>
     )
 }

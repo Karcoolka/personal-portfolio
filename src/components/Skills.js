@@ -39,31 +39,31 @@ export const Skills = () => {
                             </p>
                             <Carousel responsive={responsive} infinite={true} className="skill-slider">
                                 <div className="item">
-                                    <img src={fullStackDev} alt="Image" />
+                                    <img src={fullStackDev} alt="Full Stack" />
                                     <h5>Full-Stack Development</h5>
                                 </div>
                                 <div className="item">
-                                    <img src={mobileAppDev} alt="Image" />
+                                    <img src={mobileAppDev} alt="Mobile App" />
                                     <h5>Mobile App Development</h5>
                                 </div>
                                 <div className="item">
-                                    <img src={agile} alt="Image" />
+                                    <img src={agile} alt="Agile" />
                                     <h5>Agile Project Management</h5>
                                 </div>
                                 <div className="item">
-                                    <img src={frontEndDev} alt="Image" />
+                                    <img src={frontEndDev} alt="Front End" />
                                     <h5>Front-End Development</h5>
                                 </div>
                                 <div className="item">
-                                    <img src={backEndDev} alt="Image" />
+                                    <img src={backEndDev} alt="Back End" />
                                     <h5>Back-End Development</h5>
                                 </div>
                                 <div className="item">
-                                    <img src={foreignLanguages} alt="Image" />
+                                    <img src={foreignLanguages} alt="Foreign Language" />
                                     <h5>Foreign Languages</h5>
                                 </div>
                             </Carousel>
-                            <img src={colorSharp} alt="Image" className="background-image-left" />
+                            <img src={colorSharp} alt="Background" className="background-image-left" />
                         </div>
                     </Col>
                 </Row>

@@ -12,7 +12,7 @@ export const Banner = () => {
     const [text, setText] = useState('');
     const [delta, setDelta] = useState(300 - Math.random() * 100);
     const period = 2000;
-    const [index, setIndex] = useState(1);
+    const [setIndex] = useState(1);
     useEffect(() => {
         let ticker = setInterval(() => {
             tick();
@@ -75,7 +75,7 @@ return (
                     </TrackVisibility>
                 </Col>
                 <Col xs={12} md={6} xl={5}>
-                    <img className="profilePhotoAnimation" src={profilePhoto} alt="Profile photo"/>
+                    <img className="profilePhotoAnimation" src={profilePhoto} alt="Profile"/>
                 </Col>
             </Row>
         </Container>
