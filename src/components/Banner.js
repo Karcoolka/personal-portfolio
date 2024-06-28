@@ -1,4 +1,4 @@
-import {useState, useEffect} from "react";
+import {useState, useEffect, useCallback, useRef, useMemo} from "react";
 import {Container, Row, Col} from "react-bootstrap";
 import {ArrowRightCircle} from "react-bootstrap-icons";
 import profilePhoto from '../assets/img/profile-photo.png';
@@ -6,46 +6,44 @@ import '../assets/css/ProfilePhoto.css';
 import TrackVisibility from "react-on-screen";
 
 export const Banner = () => {
-    const [loopNum, setLoopNum] = useState(0);
     const [isDeleting, setIsDeleting] = useState(false);
-    const toRotate = [' software developer', 'web developer', 'full-stack developer', 'passionate coder'];
     const [text, setText] = useState('');
     const [delta, setDelta] = useState(300 - Math.random() * 100);
     const period = 2000;
-    const [setIndex] = useState(1);
-    useEffect(() => {
-        let ticker = setInterval(() => {
-            tick();
-        }, delta)
+    const loopNumRef = useRef(0);
 
-        return () => {clearInterval(ticker)};
-    }, [text])
+    const toRotate = useMemo(() => ['software developer', 'web developer', 'full-stack developer', 'passionate coder'], []);
 
-    const tick = () => {
-        let i = loopNum % toRotate.length;
+    const tick = useCallback(() => {
+        let i = loopNumRef.current % toRotate.length;
         let fullText = toRotate[i];
         let updateText = isDeleting ? fullText.substring(0, text.length - 1) : fullText.substring(0, text.length + 1);
 
         setText(updateText);
 
-        if(isDeleting) {
-            setDelta(prevDelta => prevDelta /2);
+        if (isDeleting) {
+            setDelta(prevDelta => prevDelta / 2);
         }
 
-        if(!isDeleting && updateText === fullText) {
+        if (!isDeleting && updateText === fullText) {
             setIsDeleting(true);
-            (setIndex(prevIndex => prevIndex - 1));
             setDelta(period);
-
         } else if (isDeleting && updateText === '') {
             setIsDeleting(false);
-            setLoopNum(loopNum+1);
-            setIndex(1);
-            setDelta(500)
-        } else {
-            setIndex(prevIndex => prevIndex + 1);
+            loopNumRef.current++;
+            setDelta(500);
         }
-    }
+    }, [isDeleting, text.length, toRotate, period]);
+
+    useEffect(() => {
+        let ticker = setInterval(() => {
+            tick();
+        }, delta);
+
+        return () => {
+            clearInterval(ticker);
+        };
+    }, [delta, tick]);
 
     const scrollToContact = () => {
         const contactSection = document.getElementById('contact');
@@ -53,6 +51,7 @@ export const Banner = () => {
             contactSection.scrollIntoView({ behavior: 'smooth' });
         }
     };
+
 
 return (
     <section className="banner" id="home">
