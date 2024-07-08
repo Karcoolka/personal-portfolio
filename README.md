@@ -2,7 +2,7 @@
 
 Thanks for checking out my project! 🚀
 
-DEMO: https://euphonious-pegasus-ea7756.netlify.app/
+DEMO: https://karcoolkacv.netlify.app
 
 ### How to Get Started 🛠️
 
