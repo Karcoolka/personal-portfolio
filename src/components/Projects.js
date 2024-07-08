@@ -1,13 +1,14 @@
 import {Container, Row, Col, Nav, Tab} from "react-bootstrap";
 import {ProjectCard} from "./ProjectCard";
 import colorSharp2 from "../assets/img/color-sharp2.png";
-import projImg2 from "../assets/img/project-img2.png";
-import projImg3 from "../assets/img/project-img3.png";
 import projFirm360 from "../assets/img/project-firm360.png";
 import projEraz from "../assets/img/project-eraz.jpg";
 import projPortfolio from "../assets/img/project-portfolio.png";
 import projRecipeRoulette from "../assets/img/project-recipe-roulette.png";
 import projAttendanceTracker from "../assets/img/project-attendance-tracker.png";
+import projAcademyRepository from "../assets/img/project-academy-repo.png";
+import projMEANApp from "../assets/img/project-mean.png";
+import projIconic from "../assets/img/project-iconic.png";
 import TrackVisibility from "react-on-screen";
 
 export const Projects = () => {
@@ -27,9 +28,10 @@ export const Projects = () => {
         },
         {
             id: 3,
-            title: "MEAN app Maxmillian",
-            description: "Full-Stack Development",
-            imgUrl: projImg2,
+            title: "MEAN app",
+            description: "IN PROGRESS",
+            // description: "Angular 17 & NodeJS & Express & MongoDB",
+            imgUrl: projMEANApp,
         },
     ];
 
@@ -57,20 +59,27 @@ export const Projects = () => {
             imgUrl: projAttendanceTracker,
             sourceCodeUrl: "https://github.com/Karcoolka/Attendance-Tracker"
         },
+        // {
+        //     id: 7,
+        //     title: "Audio Plugin",
+        //     description: "Front-End Development",
+        //     imgUrl: projImg3,
+        // },
         {
             id: 7,
-            title: "Audio Plugin",
-            description: "Front-End Development",
-            imgUrl: projImg3,
+            title: "Academy Repository",
+            description: "JS/TS, Java, HTML, CSS, Node.js, Express.js, REST, GIT, MySQL",
+            imgUrl: projAcademyRepository,
+            sourceCodeUrl: "https://github.com/Karcoolka/Academy-Exercises-Reposiotry"
         },
     ];
 
     const projects_mobile_apps = [
         {
             id: 8,
-            title: "Angular Mobile App Maxmillian",
-            description: "Mobile App Development",
-            imgUrl: projImg3,
+            title: "iOS, Android & Web Apps with Ionic & Angular",
+            description: "IN PROGRESS",
+            imgUrl: projIconic,
         },
     ];
 
