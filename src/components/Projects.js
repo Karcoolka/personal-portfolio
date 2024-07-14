@@ -29,9 +29,9 @@ export const Projects = () => {
         {
             id: 3,
             title: "MEAN app",
-            description: "IN PROGRESS",
-            // description: "Angular 17 & NodeJS & Express & MongoDB",
+            description: "Angular 17 & NodeJS & Express & MongoDB, RxJs, REST, Angular Material",
             imgUrl: projMEANApp,
+            sourceCodeUrl: "https://github.com/Karcoolka/Messanger-MEAN-App"
         },
     ];
 
