@@ -29,7 +29,7 @@ export const Projects = () => {
         {
             id: 3,
             title: "MEAN app",
-            description: "Angular 17 & NodeJS & Express & MongoDB, RxJs, REST, Angular Material",
+            description: "Angular 18 & NodeJS & Express & MongoDB, RxJs, REST, Angular Material, NPM, Nodemon, Multer, Bcrypt, JWT",
             imgUrl: projMEANApp,
             sourceCodeUrl: "https://github.com/Karcoolka/Messanger-MEAN-App"
         },
